@@ -3,7 +3,7 @@ Created on Aug 16, 2018
 @author: yun
 '''
 import discord
-import logging
+#import logging
 from discord.ext.commands import Bot
 from discord import Game
 import random
@@ -11,11 +11,11 @@ from photo_retrieving import dan
 from discord.embeds import Embed
 import youtube_dl
 
-logger = logging.getLogger('discord')
-logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-logger.addHandler(handler)
+#logger = logging.getLogger('discord')
+#logger.setLevel(logging.DEBUG)
+#handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+#handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+#logger.addHandler(handler)
 
 BOT_PREFIX = ("]\\")
 TOKEN='NDc5NTUyNDY5MzI0NTI5Njk2.DleAiQ.M07LtLMTEWXcRwgXoeeYoPgWacQ'
