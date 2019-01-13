@@ -1,6 +1,5 @@
 '''
 Created on Aug 16, 2018
-
 @author: yun
 '''
 import discord
@@ -111,10 +110,6 @@ async def danbooru(context):
 
 
 client.run(TOKEN)
-
-
-
-
 
 
 
