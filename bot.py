@@ -13,7 +13,7 @@ TOKEN = 'NDc5NTUyNDY5MzI0NTI5Njk2.DleAiQ.M07LtLMTEWXcRwgXoeeYoPgWacQ'
 
 
 bot = commands.Bot(command_prefix = PREFIX)
-extensions = ['music']
+extensions = ['music', 'photo_retrieving']
 
 @bot.event
 async def on_ready():
@@ -23,10 +23,11 @@ async def on_ready():
     print(bot.user.id)
     print('--------------')
 
+
 if __name__ == '__main__':
     for extension in extensions:
         try:
-            bot.load_extensions(extension)
+            bot.load_extension(extension)
         except Exception as e:
             print('{} could not be loaded: {}'.format(extension, e))
 
