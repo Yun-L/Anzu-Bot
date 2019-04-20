@@ -5,11 +5,14 @@ Created on Aug 16, 2018
 '''
 
 import discord
+import configparser
 from discord.ext import commands
 
+config = configparser.ConfigParser()
+config.read('config.ini')
 
-PREFIX = ']\\'
-TOKEN = 'NDc5NTUyNDY5MzI0NTI5Njk2.DleAiQ.M07LtLMTEWXcRwgXoeeYoPgWacQ'
+PREFIX = config['Default']['Token']
+TOKEN = config['Default']['Token']
 
 
 bot = commands.Bot(command_prefix = PREFIX)
