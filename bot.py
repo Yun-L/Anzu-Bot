@@ -1,9 +1,8 @@
 '''
-Created on Aug 16, 2018
 
-@author: yun
+Author: Yun
+
 '''
-
 import discord
 import configparser
 from discord.ext import commands
@@ -14,13 +13,13 @@ config.read('config.ini')
 PREFIX = config['Default']['Prefix']
 TOKEN = config['Default']['Token']
 
-
-bot = commands.Bot(command_prefix = PREFIX)
+bot = commands.Bot(command_prefix=PREFIX)
 extensions = ['music', 'photo_retrieving']
+
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity = discord.Game(name = "ee"))
+    await bot.change_presence(activity=discord.Game(name="ee"))
     print('Logged in as:')
     print(bot.user.name)
     print(bot.user.id)
