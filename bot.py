@@ -11,7 +11,7 @@ from discord.ext import commands
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-PREFIX = config['Default']['Token']
+PREFIX = config['Default']['Prefix']
 TOKEN = config['Default']['Token']
 
 
@@ -20,10 +20,11 @@ extensions = ['music', 'photo_retrieving']
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="ee"))
+    await bot.change_presence(activity = discord.Game(name = "ee"))
     print('Logged in as:')
     print(bot.user.name)
     print(bot.user.id)
+    print('With bot prefix: {}'.format(PREFIX))
     print('--------------')
 
 
@@ -34,5 +35,6 @@ if __name__ == '__main__':
         except Exception as e:
             print('{} could not be loaded: {}'.format(extension, e))
 
-    bot.run(TOKEN)
+    bot.run(
+        TOKEN)
 
