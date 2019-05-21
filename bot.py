@@ -34,6 +34,4 @@ if __name__ == '__main__':
         except Exception as e:
             print('{} could not be loaded: {}'.format(extension, e))
 
-    bot.run(
-        TOKEN)
-
+    bot.run(TOKEN)
