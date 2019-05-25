@@ -5,7 +5,10 @@ Author: Yun
 '''
 import discord
 import configparser
+import logging
 from discord.ext import commands
+
+logging.basicConfig(level=logging.INFO)
 
 config = configparser.ConfigParser()
 config.read('config.ini')
